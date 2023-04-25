@@ -21,9 +21,7 @@
 */
 
 /* _____________ Your Code Here _____________ */
-
-type Length<T> = T extends { length: infer Length } ? Length : never
-
+type Length<T extends readonly any[]> = T extends { length: infer Length } ? Length : never
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
