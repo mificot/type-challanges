@@ -20,9 +20,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type TupleToObject<T extends readonly any[]> = {
-  [value in T[number]]: value
-}
+type TupleToObject<T extends readonly (string | number)[]> = { [value in T[number]]: value }
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
