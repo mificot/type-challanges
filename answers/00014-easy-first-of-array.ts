@@ -25,8 +25,7 @@
 // First solution
 // type First<T extends any[]> = T extends { length: 0 } ? never : T[0];
 // Second solution
-type First<T extends any[]> = T extends [infer First, ...infer Tail] ? First : never;
-
+type First<T extends any[]> = T extends [infer First, ...any[]] ? First : never
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
